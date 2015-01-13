@@ -33,8 +33,28 @@ nav{
 	}
 }
 
+input{
+	float: right;
+}
+
 .clear{
 	clear: both;
+}
+
+.topEllipsis{
+	background-image: url("../images/topLeft.png");
+	width: 307px;
+	height: 299px;
+	position: absolute;
+}
+
+.bottomEllipsis{
+	background-image: url("../images/bottomRight.png");
+	width: 307px;
+	height: 307px;
+	top: 603px;
+	position: absolute;
+	margin: 0 0 0 373px;
 }
 
 .logoWrapper{
@@ -68,6 +88,10 @@ nav{
 .leftContent{
 	width: 680px;
 	float: left;
+
+	h2, p{
+		padding: 0 30px 8px;
+	}
 }
 
 .rightContent{
@@ -78,19 +102,93 @@ nav{
 
 .fullWidth{
 	width: 100%;
-	height: 190px;
+	height: 160px;
 }
 
 .iPadLeft{
-	width: 150px;
+	width: 130px;
 	float: left;
 	display: inline-block;
+	padding-left: 30px;
 }
 
 .iPadRight{
-	width: 874px;
+	width: 839px;
 	float: right;
 	display: inline-block;
+	padding-right: 25px;
+}
+
+#introText{
+	width: 264px;
+	padding: 60px 40px;
+}
+
+.signUp{
+	margin-top: 50px;
+
+	.inputTitle{
+		float: left;
+		margin-bottom: 20px;
+	}
+
+	.contactDetails{
+		max-width: 180px;
+		margin-bottom: 15px;
+	}
+
+	.terms{
+		font-size: 12px;
+		display: inline-block;
+		float: left;
+		margin-top: 5px;
+	}
+
+	.termsBox{
+		margin-top: 5px;
+	}
+
+	.button{
+		margin-top: 5px;
+
+		input{
+			width: 100%;
+			background-color: $black;
+			color: $white;
+			border: none;
+			padding: 10px;
+		}
+	}
+}
+
+.socialIcons{
+	float: left;
+	font-weight: bold;
+	font-size: 15px;
+	margin: 20px 0 0 12px;
+
+	.facebook{
+		background-image: url("../images/socialFacebook.png");
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		margin: 0 5px 0 9px;
+	}
+
+	.instagram{
+		background-image: url("../images/socialInstagram.png");
+		display: inline-block;
+		width: 35px;
+		height: 36px;
+		margin: 0 5px 0 0;
+	}
+
+	.twitter{
+		background-image: url("../images/socialTwitter.png");
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+	}
 }
 
 footer{
