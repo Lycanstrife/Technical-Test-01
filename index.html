@@ -12,6 +12,10 @@
 
 <body>
 
+	<div class="leaderBoard">
+		<p>728x90 Leaderboard</p>
+	</div>
+
 	<div class="wrapper">
 
 		<div class="logoWrapper">
@@ -47,21 +51,21 @@
 
 				<p>Sign up for notifications below:</p>
 
-				<div class="signUp">
+				<form name="input" action="http://ss1.ciwcertified.com/cgi-bin/process.pl" method="post" class="signUp">
 
-					<div class="inputTitle">Firstname</div><input class="contactDetails" type="text" id="firstname" />
-					<div class="inputTitle">Surname</div><input class="contactDetails" type="text" id="surname" />
-					<div class="inputTitle">Email</div><input class="contactDetails" type="text" id="email" />
+					<div class="inputTitle">Firstname</div><input class="contactDetails" type="text" id="firstname" name="Firstname" required/>
+					<div class="inputTitle">Surname</div><input class="contactDetails" type="text" id="surname" name="Surname" />
+					<div class="inputTitle">Email</div><input class="contactDetails" type="text" id="email" name="Email" required/>
 
 					<div class="clear"></div>
 
-					<p class="terms">I agree to the terms and conditions:</p><input class="termsBox" type="checkbox" id="terms" />
+					<p class="terms">I agree to the terms and conditions:</p><input class="termsBox" type="checkbox" name="Terms agreed" id="terms" required/>
 
 					<div class="clear"></div>
 
 					<div class="button"><input type="submit" value="Notify me!" /></div>
 
-				</div>
+				</form>
 
 			</div>
 		</div>
@@ -88,10 +92,10 @@
 
 			<div class="rightContent">
 				
-				<img src="images/cover.jpg" />
+				<img class="currentIssue" src="images/cover.jpg" />
 
 				<div class="socialIcons">
-					FOLLOW ESCAPISM ON:
+					<p class="socialText">FOLLOW ESCAPISM ON:</p>
 					<div class="facebook"></div>
 					<div class="instagram"></div>
 					<div class="twitter"></div>

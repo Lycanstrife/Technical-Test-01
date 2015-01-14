@@ -5,63 +5,134 @@ body {
   background-color: #d2d2d2;
 }
 
-/* line 9, scss/_layout.scss */
+@media (max-width: 1024px) {
+  /* line 9, scss/_layout.scss */
+  p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 9, scss/_layout.scss */
+  p {
+    font-size: 13px;
+  }
+}
+
+/* line 19, scss/_layout.scss */
 nav {
   height: 50px;
   background-color: #000000;
 }
-/* line 13, scss/_layout.scss */
+/* line 23, scss/_layout.scss */
 nav ul {
   list-style: none;
   margin: 0 auto;
   text-align: center;
-  padding: 15px;
+  padding: 16px;
 }
-/* line 19, scss/_layout.scss */
+@media (max-width: 1024px) {
+  /* line 23, scss/_layout.scss */
+  nav ul {
+    text-align: right;
+    padding: 16px 15px 16px;
+  }
+}
+/* line 34, scss/_layout.scss */
 nav ul li {
   display: inline;
 }
-/* line 22, scss/_layout.scss */
+/* line 37, scss/_layout.scss */
 nav ul li a {
   color: #ffffff;
   text-decoration: none;
   margin: 15px;
 }
-/* line 28, scss/_layout.scss */
+@media (max-width: 768px) {
+  /* line 37, scss/_layout.scss */
+  nav ul li a {
+    margin: 15px 12px;
+  }
+}
+/* line 47, scss/_layout.scss */
 nav ul li a:hover {
   background-color: #ffffff;
   color: #000000;
 }
 
-/* line 36, scss/_layout.scss */
+/* line 55, scss/_layout.scss */
 input {
   float: right;
 }
 
-/* line 40, scss/_layout.scss */
+/* line 59, scss/_layout.scss */
 .clear {
   clear: both;
 }
 
-/* line 44, scss/_layout.scss */
+/* line 63, scss/_layout.scss */
+.leaderBoard {
+  width: 668px;
+  height: 30px;
+  background-color: #969696;
+  margin: 0 auto;
+  padding: 20px 30px 40px 30px;
+}
+@media (max-width: 768px) {
+  /* line 63, scss/_layout.scss */
+  .leaderBoard {
+    display: none;
+  }
+}
+/* line 74, scss/_layout.scss */
+.leaderBoard p {
+  color: #d2d2d2;
+  font-style: italic;
+  text-align: center;
+  font-size: 45px;
+  margin: 0;
+  opacity: 0.5;
+}
+
+/* line 84, scss/_layout.scss */
 .topEllipsis {
   background-image: url("../images/topLeft.png");
   width: 307px;
   height: 299px;
   position: absolute;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  /* line 84, scss/_layout.scss */
+  .topEllipsis {
+    display: none;
+  }
 }
 
-/* line 51, scss/_layout.scss */
+/* line 96, scss/_layout.scss */
 .bottomEllipsis {
   background-image: url("../images/bottomRight.png");
   width: 307px;
   height: 307px;
-  top: 603px;
+  top: 693px;
   position: absolute;
   margin: 0 0 0 373px;
+  pointer-events: none;
+}
+@media (max-width: 1024px) {
+  /* line 96, scss/_layout.scss */
+  .bottomEllipsis {
+    top: 416px;
+    margin: 0 0 0 128px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 96, scss/_layout.scss */
+  .bottomEllipsis {
+    display: none;
+  }
 }
 
-/* line 60, scss/_layout.scss */
+/* line 115, scss/_layout.scss */
 .logoWrapper {
   width: 100%;
   height: 44px;
@@ -69,7 +140,7 @@ input {
   background-color: #ffffff;
 }
 
-/* line 67, scss/_layout.scss */
+/* line 122, scss/_layout.scss */
 #logo {
   background-image: url("../images/logo.png");
   width: 206px;
@@ -77,14 +148,26 @@ input {
   margin: 0 auto;
 }
 
-/* line 74, scss/_layout.scss */
+/* line 129, scss/_layout.scss */
 .wrapper {
   width: 1024px;
   background-color: #ededed;
   margin: 0 auto;
 }
+@media (max-width: 1024px) {
+  /* line 129, scss/_layout.scss */
+  .wrapper {
+    width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 129, scss/_layout.scss */
+  .wrapper {
+    width: 320px;
+  }
+}
 
-/* line 80, scss/_layout.scss */
+/* line 143, scss/_layout.scss */
 .sectionOne,
 .sectionTwo {
   width: 100%;
@@ -93,81 +176,178 @@ input {
   background-color: #ededed;
 }
 
-/* line 88, scss/_layout.scss */
+/* line 151, scss/_layout.scss */
 .leftContent {
   width: 680px;
   float: left;
 }
-/* line 92, scss/_layout.scss */
+@media (max-width: 1024px) {
+  /* line 151, scss/_layout.scss */
+  .leftContent {
+    width: 435px;
+  }
+  /* line 158, scss/_layout.scss */
+  .leftContent img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /* line 151, scss/_layout.scss */
+  .leftContent {
+    width: 320px;
+  }
+  /* line 166, scss/_layout.scss */
+  .leftContent img {
+    max-width: 320px;
+  }
+}
+/* line 171, scss/_layout.scss */
 .leftContent h2, .leftContent p {
   padding: 0 30px 8px;
 }
 
-/* line 97, scss/_layout.scss */
+/* line 176, scss/_layout.scss */
 .rightContent {
   width: 344px;
   float: left;
   text-align: center;
 }
+@media (max-width: 1024px) {
+  /* line 176, scss/_layout.scss */
+  .rightContent {
+    width: 293px;
+    padding-right: 40px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 176, scss/_layout.scss */
+  .rightContent {
+    width: 320px;
+  }
+}
+@media (max-width: 1024px) {
+  /* line 190, scss/_layout.scss */
+  .rightContent .currentIssue {
+    max-width: 293px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 190, scss/_layout.scss */
+  .rightContent .currentIssue {
+    max-width: 257px;
+  }
+}
 
-/* line 103, scss/_layout.scss */
+/* line 201, scss/_layout.scss */
 .fullWidth {
   width: 100%;
   height: 160px;
 }
+@media (max-width: 1024px) {
+  /* line 201, scss/_layout.scss */
+  .fullWidth {
+    width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 201, scss/_layout.scss */
+  .fullWidth {
+    width: 320px;
+    min-height: 280px;
+  }
+}
 
-/* line 108, scss/_layout.scss */
+/* line 215, scss/_layout.scss */
 .iPadLeft {
   width: 130px;
   float: left;
   display: inline-block;
   padding-left: 30px;
 }
+@media (max-width: 768px) {
+  /* line 215, scss/_layout.scss */
+  .iPadLeft {
+    width: 105px;
+    margin-top: 24px;
+  }
+}
 
-/* line 115, scss/_layout.scss */
+/* line 227, scss/_layout.scss */
 .iPadRight {
   width: 839px;
   float: right;
   display: inline-block;
   padding-right: 25px;
 }
+@media (max-width: 1024px) {
+  /* line 227, scss/_layout.scss */
+  .iPadRight {
+    width: 583px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 227, scss/_layout.scss */
+  .iPadRight {
+    width: 160px;
+  }
+}
 
-/* line 122, scss/_layout.scss */
+/* line 242, scss/_layout.scss */
 #introText {
   width: 264px;
   padding: 60px 40px;
 }
+@media (max-width: 1024px) {
+  /* line 242, scss/_layout.scss */
+  #introText {
+    width: 253px;
+    padding: 45px 40px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 242, scss/_layout.scss */
+  #introText {
+    width: 264px;
+    padding: 40px 28px 20px;
+  }
+}
 
-/* line 127, scss/_layout.scss */
+/* line 257, scss/_layout.scss */
 .signUp {
   margin-top: 50px;
 }
-/* line 130, scss/_layout.scss */
+/* line 260, scss/_layout.scss */
 .signUp .inputTitle {
   float: left;
   margin-bottom: 20px;
 }
-/* line 135, scss/_layout.scss */
+/* line 265, scss/_layout.scss */
 .signUp .contactDetails {
   max-width: 180px;
   margin-bottom: 15px;
 }
-/* line 140, scss/_layout.scss */
+@media (max-width: 1024px) {
+  /* line 265, scss/_layout.scss */
+  .signUp .contactDetails {
+    max-width: 165px;
+  }
+}
+/* line 274, scss/_layout.scss */
 .signUp .terms {
   font-size: 12px;
   display: inline-block;
   float: left;
   margin-top: 5px;
 }
-/* line 147, scss/_layout.scss */
+/* line 281, scss/_layout.scss */
 .signUp .termsBox {
   margin-top: 5px;
 }
-/* line 151, scss/_layout.scss */
+/* line 285, scss/_layout.scss */
 .signUp .button {
   margin-top: 5px;
 }
-/* line 154, scss/_layout.scss */
+/* line 288, scss/_layout.scss */
 .signUp .button input {
   width: 100%;
   background-color: #000000;
@@ -176,14 +356,45 @@ input {
   padding: 10px;
 }
 
-/* line 164, scss/_layout.scss */
+/* line 298, scss/_layout.scss */
 .socialIcons {
   float: left;
   font-weight: bold;
   font-size: 15px;
   margin: 20px 0 0 12px;
 }
-/* line 170, scss/_layout.scss */
+@media (max-width: 1024px) {
+  /* line 298, scss/_layout.scss */
+  .socialIcons {
+    font-size: 12px;
+    margin: 20px 0 0 17px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 298, scss/_layout.scss */
+  .socialIcons {
+    margin: 0 auto;
+  }
+}
+/* line 313, scss/_layout.scss */
+.socialIcons .socialText {
+  font-size: 15px;
+  display: inline-block;
+}
+@media (max-width: 1024px) {
+  /* line 313, scss/_layout.scss */
+  .socialIcons .socialText {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 313, scss/_layout.scss */
+  .socialIcons .socialText {
+    margin: 20px 0 12px 32px;
+    display: block;
+  }
+}
+/* line 327, scss/_layout.scss */
 .socialIcons .facebook {
   background-image: url("../images/socialFacebook.png");
   display: inline-block;
@@ -191,7 +402,13 @@ input {
   height: 36px;
   margin: 0 5px 0 9px;
 }
-/* line 178, scss/_layout.scss */
+@media (max-width: 768px) {
+  /* line 327, scss/_layout.scss */
+  .socialIcons .facebook {
+    margin: 0 5px 0 14px;
+  }
+}
+/* line 339, scss/_layout.scss */
 .socialIcons .instagram {
   background-image: url("../images/socialInstagram.png");
   display: inline-block;
@@ -199,7 +416,7 @@ input {
   height: 36px;
   margin: 0 5px 0 0;
 }
-/* line 186, scss/_layout.scss */
+/* line 347, scss/_layout.scss */
 .socialIcons .twitter {
   background-image: url("../images/socialTwitter.png");
   display: inline-block;
@@ -207,7 +424,7 @@ input {
   height: 36px;
 }
 
-/* line 194, scss/_layout.scss */
+/* line 355, scss/_layout.scss */
 footer {
   width: 100%;
   height: 14px;

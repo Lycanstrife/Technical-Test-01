@@ -6,6 +6,16 @@ body{
 	background-color: $grey;
 }
 
+p{
+	@media (max-width: 1024px) {
+		font-size: 15px;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 13px;
+	}
+}
+
 nav{
 	height: 50px;
 	background-color: $black;
@@ -14,7 +24,12 @@ nav{
 		list-style: none;
 		margin: 0 auto;
 		text-align: center;
-		padding: 15px;
+		padding: 16px;
+
+		@media (max-width: 1024px) {
+			text-align: right;
+			padding: 16px 15px 16px;
+		}
 
 		li{
 			display: inline;
@@ -23,6 +38,10 @@ nav{
 				color: $white;
 				text-decoration: none;
 				margin: 15px;
+
+				@media (max-width: 768px) {
+					margin: 15px 12px;
+				}
 			}
 
 			a:hover{
@@ -41,20 +60,56 @@ input{
 	clear: both;
 }
 
+.leaderBoard{
+	width: 668px;
+	height: 30px;
+	background-color: $darkgrey;
+	margin: 0 auto;
+	padding: 20px 30px 40px 30px;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
+
+	p{
+		color: $grey;
+		font-style: italic;
+		text-align: center;
+		font-size: 45px;
+		margin: 0;
+		opacity: 0.5;
+	}
+}
+
 .topEllipsis{
 	background-image: url("../images/topLeft.png");
 	width: 307px;
 	height: 299px;
 	position: absolute;
+	pointer-events: none;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
 }
 
 .bottomEllipsis{
 	background-image: url("../images/bottomRight.png");
 	width: 307px;
 	height: 307px;
-	top: 603px;
+	top: 693px;
 	position: absolute;
 	margin: 0 0 0 373px;
+	pointer-events: none;
+
+	@media (max-width: 1024px) {
+		top: 416px;
+		margin: 0 0 0 128px;
+	}
+
+	@media (max-width: 768px) {
+		display: none;
+	}
 }
 
 .logoWrapper{
@@ -75,6 +130,14 @@ input{
 	width: 1024px;
 	background-color: $lightgrey;
 	margin: 0 auto;
+
+	@media (max-width: 1024px) {
+		width: 768px;
+	}
+
+	@media (max-width: 768px) {
+		width: 320px;
+	}
 }
 
 .sectionOne,
@@ -89,6 +152,22 @@ input{
 	width: 680px;
 	float: left;
 
+	@media (max-width: 1024px) {
+		width: 435px;
+
+		img{
+			max-width: 100%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		width: 320px;
+
+		img{
+			max-width: 320px;
+		}
+	}
+
 	h2, p{
 		padding: 0 30px 8px;
 	}
@@ -98,11 +177,39 @@ input{
 	width: 344px;
 	float: left;
 	text-align: center;
+
+	@media (max-width: 1024px) {
+		width: 293px;
+		padding-right: 40px;
+	}
+
+	@media (max-width: 768px) {
+		width: 320px;
+	}
+
+	.currentIssue{
+		@media (max-width: 1024px) {
+			max-width: 293px;
+		}
+
+		@media (max-width: 768px) {
+			max-width: 257px;
+		}
+	}
 }
 
 .fullWidth{
 	width: 100%;
 	height: 160px;
+
+	@media (max-width: 1024px) {
+		width: 768px;
+	}
+
+	@media (max-width: 768px) {
+		width: 320px;
+		min-height: 280px;
+	}
 }
 
 .iPadLeft{
@@ -110,6 +217,11 @@ input{
 	float: left;
 	display: inline-block;
 	padding-left: 30px;
+
+	@media (max-width: 768px) {
+		width: 105px;
+		margin-top: 24px;
+	}
 }
 
 .iPadRight{
@@ -117,11 +229,29 @@ input{
 	float: right;
 	display: inline-block;
 	padding-right: 25px;
+
+	@media (max-width: 1024px) {
+		width: 583px;
+	}
+
+	@media (max-width: 768px) {
+		width: 160px;
+	}
 }
 
 #introText{
 	width: 264px;
 	padding: 60px 40px;
+
+	@media (max-width: 1024px) {
+		width: 253px;
+		padding: 45px 40px;
+	}
+
+	@media (max-width: 768px) {
+		width: 264px;
+		padding: 40px 28px 20px;
+	}
 }
 
 .signUp{
@@ -135,6 +265,10 @@ input{
 	.contactDetails{
 		max-width: 180px;
 		margin-bottom: 15px;
+
+		@media (max-width: 1024px) {
+			max-width: 165px;
+		}
 	}
 
 	.terms{
@@ -167,12 +301,39 @@ input{
 	font-size: 15px;
 	margin: 20px 0 0 12px;
 
+	@media (max-width: 1024px) {
+		font-size: 12px;
+		margin: 20px 0 0 17px;
+	}
+
+	@media (max-width: 768px) {
+		margin: 0 auto;
+	}
+
+	.socialText{
+		font-size: 15px;
+		display: inline-block;
+
+		@media (max-width: 1024px) {
+			font-size: 12px;
+		}
+
+		@media (max-width: 768px) {
+			margin: 20px 0 12px 32px;
+			display: block;
+		}
+	}
+
 	.facebook{
 		background-image: url("../images/socialFacebook.png");
 		display: inline-block;
 		width: 36px;
 		height: 36px;
 		margin: 0 5px 0 9px;
+
+		@media (max-width: 768px) {
+			margin: 0 5px 0 14px;
+		}
 	}
 
 	.instagram{
